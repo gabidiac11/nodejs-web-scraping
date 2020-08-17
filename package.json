@@ -4,7 +4,10 @@
   "description": "something",
   "main": "collectAllHref.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node collectAllHref.js",
+    "rename": "node renameInSorted.js",
+    "mergepdf": "node mergePdf.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +20,8 @@
   },
   "homepage": "https://github.com/gabidiac11/nodejs-web-scraping#readme",
   "dependencies": {
-    "puppeteer": "^5.2.1"
+    "pdf-merge": "^1.2.0",
+    "puppeteer": "^5.2.1",
+    "request": "^2.88.2"
   }
 }

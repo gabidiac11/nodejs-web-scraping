@@ -60,7 +60,7 @@ async function createFileWithBuffer(pathname, buffer) {
 async function makeThis() {
     fs.readFile("links.json",  async function(err, buf) {
         const matches = JSON.parse(buf.toString())['matches'];
-        for(let  i = 0; i < matches.length; i++) {
+        for(let  i = 0; i < matches.length && i < 3; i++) {
             let html = pullCodeFromConsole(matches[i]);
             if(typeof html === "string") {
                 html = html.replace(/href="styles/g, 'href="https://angular.io/styles');
@@ -68,11 +68,12 @@ async function makeThis() {
                 console.log({resultFile});
             }
         }
+        exit()
         // console.log({matches})
     });
 }
-async function see() {
-    let html = await pullCodeFromConsole("https://angular.io/docs");
+async function see(link) {
+    let html = await pullCodeFromConsole(link);
     console.log({
         html    
     });
@@ -81,11 +82,9 @@ async function see() {
     }
     const resultFile = await createFileWithBuffer(`files/file_${1}.html`, html);
     console.log({resultFile});
-    exit();
-}
 
-// see();
-makeThis();
+}
+// makeThis();
 // pullCodeFromConsole("https://angular.io/docs").then(html => {
 //     console.log({html});
 // });
