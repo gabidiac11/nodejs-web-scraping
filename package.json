@@ -1,0 +1,22 @@
+{
+  "name": "gabi",
+  "version": "1.0.0",
+  "description": "something",
+  "main": "collectAllHref.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabidiac11/nodejs-web-scraping.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabidiac11/nodejs-web-scraping/issues"
+  },
+  "homepage": "https://github.com/gabidiac11/nodejs-web-scraping#readme",
+  "dependencies": {
+    "puppeteer": "^5.2.1"
+  }
+}
