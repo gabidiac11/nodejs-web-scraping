@@ -1,0 +1,19 @@
+footer,
+aside,
+header,
+.quick-links,
+.metadata,
+.newsletter-container,
+#Specifications,
+#Specifications + table,
+#See_also,
+#See_also + ul,
+.newsletter-description {
+  display: none !important;
+}
+.wiki-left-present {
+  display: block !important;
+}
+dl, p {
+  max-width: unset!important;
+}
